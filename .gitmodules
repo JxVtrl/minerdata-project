@@ -4,3 +4,9 @@
 [submodule "minerdata-backend"]
 	path = minerdata-backend
 	url = git@github.com:JxVtrl/minerdata-backend.git
+[submodule "minerdata-backend"]
+	path = minerdata-backend
+	url = https://github.com/JxVtrl/minerdata-backend
+[submodule "minerdata-frontend"]
+	path = minerdata-frontend
+	url = git@github.com:JxVtrl/minerdata-frontend.git
