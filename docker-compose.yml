@@ -2,26 +2,26 @@ version: "3.9"
 
 services:
   backend:
-    build: ./minerdata-backend
-    container_name: minerdata-backend
+    build: ./backend
+    container_name: backend
     ports:
       - "3001:3001"
     env_file:
-      - ./minerdata-backend/.env
+      - ./backend/.env
     volumes:
-      - ./minerdata-backend:/app
+      - ./backend:/app
     networks:
       - minerdata-net
     depends_on:
       - db
 
   frontend:
-    build: ./minerdata-frontend
-    container_name: minerdata-frontend
+    build: ./frontend
+    container_name: frontend
     ports:
       - "5173:5173"
     volumes:
-      - ./minerdata-frontend:/app
+      - ./frontend:/app
     environment:
       - VITE_BACKEND_URL=http://backend:3001
     networks:
